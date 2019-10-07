@@ -1,3 +1,15 @@
+# MEMO
+
+```
+$ wget https://pjreddie.com/media/files/yolov2-tiny-voc.weights
+$ wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov2-tiny-voc.cfg
+$ python yad2k.py yolov2-tiny-voc.cfg yolov2-tiny-voc.weights model_data/yolo-tiny-voc.h5
+$ pipenv shell
+$ python test_yolo.py model_data/yolo-tiny-voc.h5 -a ./model_data/yolo-tiny-voc_anchors.txt -c ./model_data/pascal_classes.txt
+$ # see images/out/
+```
+
+
 # YAD2K: Yet Another Darknet 2 Keras
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
