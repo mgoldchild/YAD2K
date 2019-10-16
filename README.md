@@ -3,10 +3,22 @@
 ```
 $ wget https://pjreddie.com/media/files/yolov2-tiny-voc.weights
 $ wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov2-tiny-voc.cfg
-$ python yad2k.py yolov2-tiny-voc.cfg yolov2-tiny-voc.weights model_data/yolo-tiny-voc.h5
+$ python yad2k.py yolov2-tiny-voc.cfg yolov2-tiny-voc.weights model_data/yolov2-tiny-voc.h5
 $ pipenv shell
-$ python test_yolo.py model_data/yolo-tiny-voc.h5 -a ./model_data/yolo-tiny-voc_anchors.txt -c ./model_data/pascal_classes.txt
+$ python test_yolo.py model_data/yolov2-tiny-voc.h5 -a ./model_data/yolov2-tiny-voc_anchors.txt -c ./model_data/pascal_classes.txt
 $ # see images/out/
+```
+
+
+## Convert test from tiny yolo v2 on pascal voc
+
+- DL weights from notebook instance (e.g. tiny-yolo-voc_5200.weights)
+
+```
+$ wget https://raw.githubusercontent.com/AlexeyAB/darknet/47c7af1cea5bbdedf1184963355e6418cb8b1b4f/cfg/tiny-yolo-voc.cfg
+$ pipenv shell
+$ python yad2k.py tiny-yolo-voc.cfg tiny-yolo-voc_5200.weights model_data/yolov2-tiny-voc.h5
+$ python test_yolo.py model_data/yolov2-tiny-voc.h5 -a ./model_data/yolov2-tiny-voc_anchors.txt -c ./model_data/pascal_classes.txt
 ```
 
 
