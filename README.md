@@ -12,12 +12,21 @@ $ python test_yolo.py model_data/yolov2-tiny-voc.h5 -a ./model_data/yolov2-tiny-
 $ # see images/out/
 ```
 
-w/ darknet
+w/ darknet (tiny v2)
 
 ```
 $ pipenv shell
 $ python yad2k.py ../darknet/cfg/tiny-yolo-voc2.cfg ../darknet/tiny-yolo-voc2_800.weights model_data/yolov2-tiny-voc800.h5
 $ python test_yolo.py model_data/yolov2-tiny-voc800.h5 -a ./model_data/yolov2-tiny-voc_anchors.txt -c ./model_data/pascal_classes2.txt
+$ # see images/out/
+```
+
+w/ darknet (v2)
+
+```
+$ pipenv shell
+$ python yad2k.py ../darknet/cfg/yolo-voc.2.0.cfg ../darknet/my_5500.weights model_data/yolov2-voc5000.h5
+$ python test_yolo.py model_data/yolov2-voc5000.h5 -a ./model_data/yolov2-voc5000_anchors.txt -c ./model_data/pascal_classes2.txt
 $ # see images/out/
 ```
 
